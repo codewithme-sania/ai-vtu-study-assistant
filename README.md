@@ -1,45 +1,38 @@
 # 🤖 AI VTU Study Assistant
 
-A prompt-engineered AI study assistant designed to help undergraduate
-Electronics and Communication Engineering (ECE) students prepare for
-VTU examinations.
+A prompt-engineered AI study assistant for undergraduate **Electronics and Communication Engineering (ECE)** students following the **VTU 2022 Scheme**.
 
-The project demonstrates how systematic prompt design, testing,
-evaluation, and iteration can improve the quality and consistency of
-AI-generated educational responses.
+🔗 **Live Demo:** https://huggingface.co/spaces/codewithme-sania/ai-vtu-study-assistant
 
 ---
 
 ## 🎯 Problem Statement
 
-Generic AI assistants can provide technically correct explanations,
-but their responses may vary in:
+Generic AI assistants can generate explanations, but students often need different answer formats depending on their examination requirements.
 
-- Answer depth
-- Structure
-- Technical terminology
-- Examination relevance
-- Equation formatting
-- Consistency
+For example:
 
-VTU students often need different formats depending on their purpose,
-such as learning a concept, preparing a 2-mark answer, or studying a
-10-mark question.
+- Concept explanation
+- 2-mark answer
+- 5-mark answer
+- 10-mark answer
+- Quick revision
+- Practice questions
+
+This project explores how **prompt engineering can control AI response structure, depth, accuracy, and examination usefulness.**
 
 ---
 
 ## 💡 Solution
 
-This project develops a structured prompt system that controls how an
-AI assistant responds to ECE academic questions.
+The AI VTU Study Assistant uses structured prompts to transform a generic AI assistant into a specialized academic assistant for ECE students.
 
-The system uses prompt engineering techniques to control:
+The prompt system controls:
 
-- Role
 - Student context
 - Answer mode
 - Response structure
-- Technical accuracy
+- Technical terminology
 - Equation handling
 - Examination orientation
 - Output constraints
@@ -50,7 +43,7 @@ The system uses prompt engineering techniques to control:
 
 The project was developed iteratively.
 
-### V1 — Baseline Prompt
+### V1 — Baseline
 
 A simple prompt was created to establish baseline performance.
 
@@ -82,36 +75,40 @@ V3 introduced stronger controls for:
 
 ---
 
-## 🔬 Evaluation Method
+## 🔬 Evaluation
 
-The same topic, **MOSFET**, was used to test different prompt
-versions.
+The same ECE topic, **MOSFET**, was used to compare the prompt versions.
 
-Evaluation criteria included:
+| Criteria | V1 | V2 | V3 |
+|---|---:|---:|---:|
+| Accuracy | 4/5 | 4/5 | 5/5 |
+| Relevance | 5/5 | 5/5 | 5/5 |
+| Clarity | 4/5 | 4/5 | 5/5 |
+| Structure | 4/5 | 5/5 | 5/5 |
+| Exam Usefulness | 4/5 | 5/5 | 5/5 |
+| Equation Handling | 2/5 | 3/5 | 5/5 |
+| Technical Consistency | 4/5 | 4/5 | 5/5 |
 
-| Criteria | Purpose |
-|---|---|
-| Accuracy | Technical correctness |
-| Relevance | Focus on the requested topic |
-| Clarity | Ease of understanding |
-| Structure | Organization of the response |
-| Exam Usefulness | Suitability for examination preparation |
-| Equation Handling | Completeness and correctness of equations |
-| Technical Consistency | Correct relationships and operating conditions |
+### Key Finding
+
+Moving from general instructions to **explicit constraints and verification rules** produced the strongest improvement.
+
+The development cycle was:
+
+**Baseline → Identify Failure → Add Constraint → Retest → Evaluate → Improve**
 
 ---
 
-## 📊 Results
+## 🚀 Demo Features
 
-The prompt evolved through three iterations:
+The current prototype supports:
 
-**V1 → V2 → V3**
-
-The evaluation showed that adding explicit structure, constraints,
-equation rules, and verification requirements improved the consistency
-and reliability of the generated response.
-
-V3 achieved the strongest overall evaluation among the tested versions.
+- 📚 Concept Explanation
+- 📝 2-Mark Answers
+- 📖 5-Mark Answers
+- 📕 10-Mark Answers
+- ⚡ Quick Revision
+- 🎯 Practice Questions
 
 ---
 
@@ -130,7 +127,9 @@ ai-vtu-study-assistant/
 │   ├── test-cases.md
 │   ├── v2-evaluation.md
 │   ├── v3-evaluation.md
-│   └── comparison.md
+│   ├── comparison.md
+│   └── results.md
 │
 ├── PROJECT_SPECIFICATION.md
-└── README.md
+├── README.md
+└── mosfet-v3-output.md
